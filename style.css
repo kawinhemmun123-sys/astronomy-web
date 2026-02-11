@@ -1,0 +1,137 @@
+body {
+  margin: 0;
+  font-family: Tahoma, sans-serif;
+  color: white;
+  text-align: center;
+
+  background-image: url("https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1920&q=80");
+  background-size: cover;              /* ให้ภาพเต็มจอ */
+  background-position: center center;  /* ตั้งตำแหน่งภาพตรงกลาง */
+  background-repeat: no-repeat;         /* ไม่ให้ภาพซ้ำ */
+  background-attachment: fixed;         /* ภาพพื้นหลังอยู่คงที่ */
+  min-height: 100vh;                    /* ให้ขยายเต็มหน้าจอ */
+}
+
+
+h1 {
+  margin: 20px 0;
+}
+
+/* พื้นที่ระบบสุริยะ */
+.solar-system {
+  position: relative;
+  width: 600px;
+  height: 600px;
+  margin: auto;
+}
+
+/* ดวงอาทิตย์ */
+.sun {
+  position: absolute;
+  top: 260px;
+  left: 260px;
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(yellow, orange, red);
+  border-radius: 50%;
+  line-height: 80px;
+  font-weight: bold;
+  color: black;
+}
+
+/* วงโคจร */
+.orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 1px dashed rgba(255,255,255,0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: spin linear infinite;
+}
+
+/* ดาว */
+.planet {
+  position: absolute;
+  top: 50%;
+  right: -8px;
+  width: 16px;
+  height: 16px;
+  background: white;
+  border-radius: 50%;
+}
+
+/* ดาวใหญ่ */
+.big {
+  width: 26px;
+  height: 26px;
+}
+
+/* วงแหวนเสาร์ */
+.ring {
+  box-shadow: 0 0 0 4px rgba(255,255,255,0.5);
+}
+
+/* ชื่อดาว */
+.label {
+  position: absolute;
+  top: -22px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 11px;
+  white-space: nowrap;
+  color: white;
+}
+
+/* ระยะวงโคจร + ความเร็ว */
+.mercury { width: 120px; height: 120px; animation-duration: 4s; }
+.venus   { width: 170px; height: 170px; animation-duration: 6s; }
+.earth   { width: 220px; height: 220px; animation-duration: 8s; }
+.mars    { width: 270px; height: 270px; animation-duration: 10s; }
+.jupiter { width: 330px; height: 330px; animation-duration: 14s; }
+.saturn  { width: 390px; height: 390px; animation-duration: 18s; }
+.uranus  { width: 450px; height: 450px; animation-duration: 22s; }
+.neptune { width: 510px; height: 510px; animation-duration: 26s; }
+
+/* การหมุน */
+@keyframes spin {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+.menu {
+  margin-bottom: 15px;
+}
+
+.menu button {
+  margin: 5px;
+  padding: 8px 14px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  background: #ffd369;
+  font-weight: bold;
+}
+.solar-system {
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 20px;
+  padding: 20px;
+}
+/* กล่องระบบสุริยะ */
+.solar-system {
+  background: rgba(0,0,0,0.5); /* ดำโปร่งแสง */
+  padding: 15px;
+  border-radius: 20px;
+}
+
+/* กล่องคำอธิบายดาว */
+#planetBox {
+  background: rgba(0,0,0,0.6);
+  padding: 15px;
+  border-radius: 15px;
+  display: inline-block;
+  margin-top: 15px;
+}
